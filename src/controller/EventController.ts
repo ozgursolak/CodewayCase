@@ -13,6 +13,6 @@ export class EventController {
   
   @Get('/')
   async getAll() {
-    return await this.eventService.createTableEvents();
+    return await this.eventService.createEventTable();
   }
 }
