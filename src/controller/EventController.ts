@@ -13,6 +13,6 @@ export class EventController {
   
   @Get('/')
   async getAll() {
-    return await this.eventService.logger("deneme");
+    return await this.eventService.createTableEvents();
   }
 }
