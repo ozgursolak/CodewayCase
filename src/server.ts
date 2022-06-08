@@ -1,7 +1,12 @@
-import { createExpressServer } from 'routing-controllers';
+import 'reflect-metadata'
+
+import { createExpressServer, useContainer } from 'routing-controllers';
+import { Container } from 'typedi';
 import { EventController }from './controller/EventController';
 
 const PORT = 8080;
+
+useContainer(Container);
 
 const routes = [EventController];
 

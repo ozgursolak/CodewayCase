@@ -1,11 +1,18 @@
-import { Controller, Get } from "routing-controllers";
+import 'reflect-metadata'
 
+import { Controller, Get, JsonController } from "routing-controllers";
+import { Inject, Service } from "typedi";
+import { EventService } from "../service/EventService";
 
 @Controller()
+@Service()
 export class EventController {
+
+  @Inject()
+  private eventService: EventService;
   
-  @Get('/users')
-  getAll() {
-    return 'This action returns all users';
+  @Get('/')
+  async getAll() {
+    return await this.eventService.logger("deneme");
   }
 }
