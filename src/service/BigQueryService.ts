@@ -1,12 +1,17 @@
 
-import { BigQuery } from '@google-cloud/bigquery';
-import { Service } from "typedi";
+import { BigQuery, Table } from '@google-cloud/bigquery';
+import { Inject, Service } from "typedi";
 import { Constants } from '../constant/Constants';
+import { BigQueryRepository } from '../repository/BigQueryRepository';
 
 @Service()
 export class BigQueryService {
     private bigquery: BigQuery;
-
+    private table: Table;
+    
+    @Inject()
+    private bigqueryRepository: BigQueryRepository;
+    
     constructor() {
         this.bigquery = new BigQuery();
     }
@@ -29,9 +34,9 @@ export class BigQueryService {
         };
          
         const [dataset] = await this.bigquery.dataset(Constants.DATASET_ID).get({ autoCreate: true });
-        const table = dataset.table(Constants.TABLE_ID);
+        this.table = dataset.table(Constants.TABLE_ID);
 
-        table.exists().then(async (data: any[]) => {
+        this.table.exists().then(async (data: any[]) => {
             const exists = data[0];
             if (!exists) {
                 await dataset.createTable(Constants.TABLE_ID, options)
@@ -39,5 +44,9 @@ export class BigQueryService {
         });
       
         return true;
+    }
+
+    async getSummary(): Promise<object> {
+        return await this.bigqueryRepository.getSummary();
     }
 }
