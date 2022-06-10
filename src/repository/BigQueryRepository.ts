@@ -36,12 +36,12 @@ export class BigQueryRepository {
       
         daily_statistics AS (
           SELECT
-          ARRAY_AGG(STRUCT(STRING(b.date) AS date, b.average_session_duration, IFNULL(b.daily_active_user_count, 0) AS active_user_count, IFNULL(b.daily_new_user_count, 0) AS new_user_count) ORDER BY b.date ASC) AS  daily_stats 
+          ARRAY_AGG(STRUCT(STRING(a.date) AS date, a.average_session_duration, IFNULL(a.daily_active_user_count, 0) AS active_user_count, IFNULL(a.daily_new_user_count, 0) AS new_user_count) ORDER BY a.date ASC) AS  daily_stats 
           FROM (
             SELECT dau.daily_active_user_count, dnw.daily_new_user_count, das.average_session_duration, dau.enterDate AS date  FROM daily_active_user dau
             LEFT JOIN daily_new_user dnw ON dnw.date = dau.enterDate
             LEFT JOIN daily_avg_session das ON das.day = dau.enterDate
-          )  b
+          )  a
         )
       
         SELECT  
