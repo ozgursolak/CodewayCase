@@ -13,24 +13,24 @@ export class BigQueryRepository {
     async getSummary(): Promise<object> {
         const query = ` 
         WITH total_users AS ( 
-          SELECT IFNULL(COUNT(DISTINCT user_id), 0) AS total_user_count  FROM  codeway-project.codeway.events
+          SELECT IFNULL(COUNT(DISTINCT user_id), 0) AS total_user_count  FROM  ${Constants.BQ_TABLE_NAME}
         ),
       
         daily_active_user AS (
           SELECT IFNULL(COUNT(DISTINCT user_id), 0) AS daily_active_user_count, DATE(TIMESTAMP_SECONDS(event_time)) AS enterDate 
-          FROM  codeway-project.codeway.events GROUP BY DATE(TIMESTAMP_SECONDS(event_time))
+          FROM  ${Constants.BQ_TABLE_NAME} GROUP BY DATE(TIMESTAMP_SECONDS(event_time))
         ),
       
         daily_new_user AS (
           SELECT  IFNULL(COUNT(DISTINCT user_id), 0) AS daily_new_user_count, a.date  
-          FROM ( SELECT user_id, DATE(TIMESTAMP_SECONDS(MIN(event_time))) AS date FROM  codeway-project.codeway.events GROUP BY (user_id)) a
+          FROM ( SELECT user_id, DATE(TIMESTAMP_SECONDS(MIN(event_time))) AS date FROM  ${Constants.BQ_TABLE_NAME} GROUP BY (user_id)) a
           GROUP BY a.date
         ),
       
         daily_avg_session AS ( 
           SELECT AVG(a.sessionDurationsPerDay) AS average_session_duration, a.day FROM
             ( SELECT  DATE(TIMESTAMP_SECONDS(event_time)) AS day, session_id as sessionId, (MAX(event_time) - MIN(event_time)) AS sessionDurationsPerDay 
-            FROM  codeway-project.codeway.events GROUP BY session_id, DATE(TIMESTAMP_SECONDS(event_time))) a
+            FROM  ${Constants.BQ_TABLE_NAME} GROUP BY session_id, DATE(TIMESTAMP_SECONDS(event_time))) a
           GROUP BY a.day 
         ),   
       
