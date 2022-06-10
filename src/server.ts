@@ -2,13 +2,13 @@ import 'reflect-metadata'
 
 import { createExpressServer, useContainer } from 'routing-controllers';
 import { Container } from 'typedi';
-import { EventController }from './controller/EventController';
+import { LogController }from './controller/LogController';
 
 const PORT = 8080;
 
 useContainer(Container);
 
-const routes = [EventController];
+const routes = [LogController];
 
 const app = createExpressServer(
     {
