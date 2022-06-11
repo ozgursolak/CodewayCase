@@ -36,5 +36,5 @@ The main architecture is like following:
  
 * After sending data to our pipeline, you can send a get request to **/summary** get summary about the data.
 
-* Note that, in order to use these endpoints, you will need **google application credential** file and you should assign the path of this file to an enviroment variable named as **GOOGLE_APPLICATION_CREDENTIALS**. 
+* Note that, in order to use these endpoints, you will need **google application credential** file and you should assign the path of this file to an enviroment variable named as <em><strong>GOOGLE_APPLICATION_CREDENTIALS<em><strong>.
 
