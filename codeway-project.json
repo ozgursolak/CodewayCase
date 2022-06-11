@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "codeway-project",
+  "private_key_id": "b3498600ddcfaa6a009c099ba8b9d3037b627bc9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCbuRrLCTTW2LEq\noi8SEB/kUuLa7C6TwiWgxzcIJApt42EE6igoEqoJ8VF6fVRayKHbdlIFn9L6keHt\n9JXkkRkzwkz1uR+oJdlCGehuhhdo+S6HidgsyE1LdOgNNo5Bh9Be5pXU6d/E4SKU\nO/WdV4AzMN7huwhXq6+BiLSqnAQY6QqP5Ijdr3SxxOUecAlMd8wNciE4gQ5cvbGs\nisDgVgcmySsMC03DAYEDdSbujlqx4xAVeS7bN7hkNLgb+n4i8Md+G7Q4fdF7DQ7T\nQH2P4gpxXGY1xc5eIKBGBDxdiQbgvNSrPdey3ouuxmc1ZR9p5sAdIMAiEEf91qsf\nBug4hSIZAgMBAAECggEAA8k/8O9P86hQQxaEjqEfPAyAMQKcjaGjC2dvO66v+o9/\nIKDhKeZC8EZygh1ReM/s0C/uhcNRccpXDqjLddj0SVP1ozolc6UQmkuUdo7NO2i8\nPEs6RbkiA04RRUmjXaMDyobl3jJzKxouiSGdvWiu+IT9P5+YmpRqn5DiFE2CSP5k\ncB3nm2UQVWrZlDoEFa3FhAm7NehvSOxTXPfLZVVttG7x66qYexts/QEt/5UfzCxq\nNV8rjLbAr4DD9uBffHtuVDSFeAtQFOJIVv123T+bKJfwEIqNwf6QkpWuZRXCbe23\nkutFs4qJIn5ipUp8vvDrZWc2hutmSM/TvtlrpgWt4QKBgQDa2X3MOhFDn4CIlJUG\nWz29QgWWwArlfgqLQjxjaOOscGPHIqP+kHCO6K9ng6CrqAOqyPTDgdBkD/+rqBHr\nw7253dphUes/W6moLjTw8P1AxmcfPOiQwIe/lIR0Ij0fn8Cddoi1bN8SH2YSO+7L\n6mb/SYPHkWOpwfhsd6kSn09YSQKBgQC2KFXU3T20bZ0PcvWeKcMtcc1oBswb7snP\nkio2Izi5ccGeq0Pp2tHxzs5sRgzpUvdQIDwHAh24/t0orfXEnXgIsMmCePu0B9iz\nfZgY+jv5hq/RyWIc5mRKZdBUhrqVRepXehWT/3TZgpm7g8v6t7DBFSwQcTJPEwdn\nqTNrkkabUQKBgCx0ARl6sgcKXxFfHOYtolzPDFOSrqPu9jVTPvDyXUyph5rrbmRG\n8pYUrYxZMEmt1xDZwN31gF7S4Rv9B6bcG62lYrZh7WbxN4Tx3c8TJF4D7u5pcNP2\nR5yijkUIr2G9EWLqsNopQyZrOlB53AePlVxFkn73CUdyHwPpSm597aABAoGAOytO\n9h4HdRxF8Ea/Ueju5UwaFLhghJJEK5Cm9X7rZhF1ezzWipfxqkIq+zCl8QRqITTX\nSs99KCJhZF1df8hGvUvvqNnzqL8DvQoG5dYitSLy6YoovIp5+VCpI0vAP8y+Gjwl\n1jUcl6q8lRRypbYVTCK8dXrPhLABr8JeWYriNIECgYBYd8+HS5l/euHmHjHc+8Rv\nvM1XstTx0pEMkOPyro3YY365ADjLgTbsZoJqqPEek0MSXl2DfUDq45ao35G3vqQI\nuRtntufV53yfT41eUMB76Ci8UoJ2WcCnCPTWmy2UDUb7MJbOJqWovR7G0WfdaGlN\n63E6KjDoGkHdPlnk9aIrxA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "codeway@codeway-project.iam.gserviceaccount.com",
+  "client_id": "105487124908715633965",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/codeway%40codeway-project.iam.gserviceaccount.com"
+}
