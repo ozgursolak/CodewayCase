@@ -4,7 +4,6 @@ import { BigQueryService } from "../service/BigQueryService";
 import { LogRequest } from "../model/request/LogRequest";
 import { PubSubService } from '../service/PubSubService';
 
-
 @JsonController()
 @Service()
 export class LogController {

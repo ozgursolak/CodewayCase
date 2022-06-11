@@ -1,4 +1,3 @@
-
 import { BigQuery, Table } from '@google-cloud/bigquery';
 import { Inject, Service } from "typedi";
 import { Constants } from '../constant/Constants';
@@ -7,8 +6,7 @@ import { BigQueryRepository } from '../repository/BigQueryRepository';
 @Service()
 export class BigQueryService {
     private bigquery: BigQuery;
-    private table: Table;
-    
+   
     @Inject()
     private bigqueryRepository: BigQueryRepository;
     
@@ -34,9 +32,9 @@ export class BigQueryService {
         };
          
         const [dataset] = await this.bigquery.dataset(Constants.DATASET_ID).get({ autoCreate: true });
-        this.table = dataset.table(Constants.TABLE_ID);
+        const table = dataset.table(Constants.TABLE_ID);
 
-        this.table.exists().then(async (data: any[]) => {
+        table.exists().then(async (data: any[]) => {
             const exists = data[0];
             if (!exists) {
                 await dataset.createTable(Constants.TABLE_ID, options)
