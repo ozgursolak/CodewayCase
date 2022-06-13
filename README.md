@@ -20,6 +20,7 @@ The main architecture is like following:
 * After creating a topic in pubsub and a table bigquery, we can publish a message with this endpoint: **/publish**
   
   * The request body is like following:
+  <br></br>
   ```json
     {
       "type": "deneme",
