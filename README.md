@@ -1,4 +1,4 @@
-# Codeway Case Study
+# Case Study
 
 In this project, I have created a small datapipeline to collect event logs from mobile devices through a HTTP POST endpoint and store those logs in Google BigQuery. 
 The main architecture is like following: 
